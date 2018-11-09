@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+
+  postgres:
+    image: postgres:10.5
+    volumes:
+    - ./dockerdatadev/psql-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: 'db_username'
+      POSTGRES_PASSWORD: 'db_password'
+      POSTGRES_DB: 'db_kanban'
+    ports:
+    - '5432:5432'

@@ -1,0 +1,23 @@
+venv/
+__pycache__/
+
+dockerdatadev/
+dockerdatastaging/
+dockerdataprod/
+
+kanban_proj/static/
+
+kanban_proj/frontend/.DS_Store
+kanban_proj/frontend/node_modules/
+kanban_proj/frontend/dist/
+kanban_proj/frontend/npm-debug.log*
+kanban_proj/frontend/yarn-debug.log*
+kanban_proj/frontend/yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
