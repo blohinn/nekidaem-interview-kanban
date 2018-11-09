@@ -23,6 +23,8 @@ services:
     - postgres:postgres
     depends_on:
     - postgres
+    environment:
+      DJANGO_SETTINGS_MODULE: kanban_proj.settings_staging
 
   postgres:
     image: postgres:10.5
