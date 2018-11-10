@@ -31,5 +31,5 @@ urlpatterns = [
     path('api/kanban/', include('kanban_app.urls', namespace='kanban_app')),
 
     # Vue.js endpoint
-    re_path(r'^$', TemplateView.as_view(template_name='index.html'))
+    re_path(r'^.*$', TemplateView.as_view(template_name='index.html'))
 ]
