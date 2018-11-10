@@ -43,7 +43,9 @@ INSTALLED_APPS = [
 
     'corsheaders',
     'oauth2_provider',
-    'rest_framework'
+    'rest_framework',
+
+    'kanban_app'
 ]
 
 MIDDLEWARE = [
@@ -156,5 +158,9 @@ OAUTH2_PROVIDER = {
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+        'rest_framework.authentication.SessionAuthentication'
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
     )
 }

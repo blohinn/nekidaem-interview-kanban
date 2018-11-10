@@ -20,8 +20,15 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # DRF Web View
+    path('api-auth/', include('rest_framework.urls')),
+
     path('login/', LoginView.as_view(), name='login'),
     path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+
+    # Apps
+    path('api/kanban/', include('kanban_app.urls', namespace='kanban_app')),
 
     # Vue.js endpoint
     re_path(r'^$', TemplateView.as_view(template_name='index.html'))
