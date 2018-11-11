@@ -1,26 +1,26 @@
 <template>
   <div id="receive-token">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <br>
+          <template v-if="accessTokenReceived">
+            <h1>Auth...</h1>
+            <p>You will be redirected to home page automatically.</p>
+          </template>
 
-    <div class="row">
-      <div class="col-12">
-        <br>
-        <template v-if="accessTokenReceived">
-          <h1>Auth...</h1>
-          <p>You will be redirected to home page automatically.</p>
-        </template>
+          <template v-if="accessToken">
+            <h1>You already authorized.</h1>
+            <a href="/">Back to home page.</a>
+          </template>
 
-        <template v-if="accessToken">
-          <h1>You already authorized.</h1>
-          <a href="/">Back to home page.</a>
-        </template>
-
-        <template v-if="!accessToken && !accessTokenReceived">
-          <h1>Error while auth.</h1>
-          <a href="/">Back to home page and try again.</a>
-        </template>
+          <template v-if="!accessToken && !accessTokenReceived">
+            <h1>Error while auth.</h1>
+            <a href="/">Back to home page and try again.</a>
+          </template>
+        </div>
       </div>
     </div>
-
   </div>
 </template>
 
